@@ -1,0 +1,1480 @@
+/*COMMON STYLES*/
+
+/*symbols*/
+
+/*@charset "UTF-8";*/
+@font-face {
+    font-family: 'symbols-technomart';
+    src: url('../symbols-technomart/font/symbols-technomart.eot') format('embedded-opentype'), url('../symbols-technomart/font/symbols-technomart.woff') format('woff'), url('../symbols-technomart/font/symbols-technomart.ttf') format('truetype'), url('../symbols-technomart/font/symbols-technomart.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'symbols-technomart';
+    src: url('../font/symbols-technomart.svg?22619757#symbols-technomart') format('svg');
+  }
+}
+*/
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: "symbols-technomart";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+.icon-left:before {
+    content: '\3c';
+}
+/* '&lt;' */
+
+.icon-right:before {
+    content: '\3e';
+}
+/* '&gt;' */
+
+.icon-basket:before {
+    content: '\62';
+}
+/* 'b' */
+
+.icon-facebook:before {
+    content: '\66';
+    vertical-align: middle;
+}
+/* 'f' */
+
+.icon-twitter:before {
+    content: '\74';
+    vertical-align: middle;
+}
+/* 't' */
+
+.icon-vk:before {
+    content: '\76';
+    vertical-align: middle;
+}
+/* 'v' */
+
+.icon-up:before {
+    content: '\2c4';
+}
+/* '˄' */
+
+.icon-down:before {
+    content: '\2c5';
+}
+/* '˅' */
+
+.icon-left-big:before {
+    content: '\2190';
+}
+/* '←' */
+
+.icon-right-big:before {
+    content: '\2192';
+}
+/* '→' */
+
+.icon-login:before {
+    content: '\2386';
+}
+/* '⎆' */
+
+.icon-logout:before {
+    content: '\241b';
+}
+/* '␛' */
+
+.icon-up-dir:before {
+    content: '\25b2';
+    line-height: 0;
+    vertical-align: middle;
+}
+/* '▲' */
+
+.icon-down-dir:before {
+    content: '\25bc';
+    line-height: 0;
+    vertical-align: middle;
+}
+/* '▼' */
+
+.icon-circle:before {
+    content: '\25cb';
+}
+/* '○' */
+
+.icon-circle-dot:before {
+    content: '\25cf';
+}
+/* '●' */
+
+.icon-star:before {
+    content: '\2605';
+}
+/* '★' */
+
+.icon-check-off:before {
+    content: '\2610';
+}
+/* '☐' */
+
+.icon-check-on:before {
+    content: '\2611';
+}
+/* '☑' */
+
+.icon-youtube:before {
+    content: '\f39e';
+}
+/* '' */
+
+.icon-home:before {
+    content: '🏠';
+}
+/* '\1f3e0' */
+
+.icon-user:before {
+    content: '👨';
+}
+/* '\1f468' */
+
+.icon-phone:before {
+    content: '📞';
+}
+/* '\1f4de' */
+
+.icon-instagramm:before {
+    content: '📷';
+}
+/* '\1f4f7' */
+
+.icon-search:before {
+    content: '🔍';
+}
+/* '\1f50d' */
+
+.icon-bookmark:before {
+    content: '🔖';
+}
+/* '\1f516' */
+
+/*sprites*/
+
+.sprite {
+    background-image: url("../img/technomart_sprites_vertical.png");
+    background-repeat: no-repeat;
+    display: block;
+}
+.sprite-bucket {
+    width: 54px;
+    height: 72px;
+    background-position: -15px -15px;
+}
+.sprite-car {
+    width: 92px;
+    height: 70px;
+    background-position: -15px -117px;
+}
+.sprite-drill {
+    width: 81px;
+    height: 73px;
+    background-position: -15px -217px;
+}
+.sprite-tractor {
+    width: 95px;
+    height: 73px;
+    background-position: -15px -470px;
+}
+/*end of sprite*/
+
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext);
+ body {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    min-width: 940px;
+}
+@import url(http://fonts.googleapis.com/css?family=Cuprum:700italic,400,400italic,700&subset=cyrillic,latin);
+ h1,
+h2,
+h3 {
+    font-family: 'Cuprum', sans-serif;
+    font-weight: 700;
+}
+a {
+    font-family: 'Cuprum', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 14px;
+}
+.btn {
+    display: inline-block;
+    background-color: #ee3643;
+    font-family: "Cuprum";
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+/*.container {*/
+    /*width: 940px;*/
+    /*padding: 0 10px;*/
+    /*margin: 0 auto;*/
+    /*!*    border: 1px dashed red;*!*/
+/*}*/
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+/*HEADER STYLES*/
+
+.header {
+    width: 100%;
+    background: #f1f5f7;
+    /*margin-bottom: 60px;*/
+    /*padding-bottom: 60px;*/
+}
+.header-menu-top {
+    width: 100%;
+    height: 42px;
+    /*    line-height: 42px;*/
+    background: #293449;
+    color: #fff;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    padding: 0;
+}
+.header-menu-top a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    width: 150px;
+    padding: 13px 0;
+    text-align: center;
+    vertical-align: top;
+}
+.header-menu-top a:hover {
+    background: #1e2737;
+}
+.header-menu-top a:active {
+    opacity: 0.5;
+}
+.header-menu-top-left a:first-child:hover {
+    background: #ca2c37;
+}
+.header-menu-top-right a:last-child:hover {
+    background: #518534!important;
+}
+.header-menu-top-left {
+    float: left;
+}
+.header-menu-top-right {
+    float: right;
+    text-align: right;
+}
+.header-menu-top-left a:nth-child(1) {
+    width: 220px;
+    text-align: center;
+    background-color: #ee3643;
+    border-bottom: 5px solid #b52933;
+    font-family: "Cuprum";
+    font-size: 24px;
+    font-weight: 700;
+    padding: 7px 0;
+}
+.header-menu-top-left a:nth-child(2) {
+    margin-right: 85px;
+}
+.header-menu-top i {
+    color: white;
+    margin-right: 13px;
+    opacity: 0.3;
+}
+.header-menu-top-right a:last-child {
+    /*background-color: #63a63e;*/
+}
+.header-intro {
+    font-family: "PT Sans";
+    font-style: italic;
+    color: red;
+    float: left;
+    margin-right: 100px;
+    margin-top: 0;
+    line-height: 18px;
+    font-weight: 700;
+}
+.header-contacts {
+    float: left;
+}
+.header .tel {
+    position: relative;
+    width: 265px;
+    font-family: "cuprum";
+    font-size: 21px;
+    padding: 10px 0;
+    border: 2px solid white;
+    color: #e9292a;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.header .tel span {
+    padding: 0;
+    margin: 0;
+}
+.icon-phone {
+    position: absolute;
+    left: 13px;
+    color: #e9292a;
+    font-size: 26px;
+    opacity: 1!important;
+}
+.header-contacts p {
+    padding-left: 0px;
+    margin: 0;
+}
+.header .login {
+    float: right;
+}
+.login-form {
+    display: inline-block;
+    background: #ffffff;
+    font-family: "Cuprum";
+    font-size: 21px;
+}
+.login-form:first-child {
+    margin-right: 6px;
+}
+.login-form i {
+    opacity: 0.2;
+}
+.login div:nth-child(1) {
+    padding: 14px 28px 14px 14px;
+}
+.login div:nth-child(2) {
+    padding: 14px 26px 14px 20px;
+}
+.login-form:hover {
+    color: #ee3643;
+    cursor: pointer;
+}
+.login-form:active {
+    opacity: 0.7;
+}
+/*HEADER-BOTTOM-MENU*/
+
+.header-bottom-menu {
+    width: 100%;
+    background: #32425c;
+    padding: 0;
+    margin: 0;
+    margin-top: 47px;
+    text-align: center;
+}
+.header-bottom-menu ul {
+    list-style: none;
+    padding: 0;
+/*    padding-left: 25px;*/
+    margin: 0;
+    border-bottom: 5px solid #293449;
+}
+.header-bottom-menu li {
+    display: inline-block;
+    width: 130px;
+    margin: 0;
+    padding: 0;
+/*    margin-right: 40px;*/
+}
+.header-bottom-menu li:nth-child(1) {
+/*    width: 170px;*/
+}
+.header-bottom-menu a {
+    display: block;
+    color: #fff;
+    padding: 18px 25px 17px 25px;
+    margin: 0;
+}
+.header-bottom-menu a:hover {
+    background: #1e2737;
+}
+.header-bottom-menu a:active {
+    opacity: 0.5;
+}
+
+/*SERVICES-IMAGES*/
+
+.services-items{
+    /*border: 1px dashed blueviolet;*/
+}
+
+.main-content .services-items .service-item span {
+    position: absolute;
+    font-family: "Cuprum";
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    top: 26px;
+    left: 24px;
+}
+.service-item div {
+    position: absolute;
+    width: 135px;
+    height: 38px;
+    background: black;
+    opacity: 0.1;
+    left: 45px;
+    bottom: 22px;
+
+}
+.main-content .services-items div em {
+    position: absolute;
+    left: 25px;
+    bottom: 20px;
+    font-style: normal;
+    font-family: "Cuprum";
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 14px 25px;
+    border-radius: 3px;
+    /*
+    background: #000;
+    opacity: 0.1;
+*/
+}
+.bucket {
+    /*width: 300px;*/
+    height: 123px;
+    /*float: left;*/
+    position: relative;
+    background: #f6b22d;
+    /*margin-right: 20px;*/
+}
+.drill {
+    /*width: 300px;*/
+    height: 123px;
+    /*float: left;*/
+    position: relative;
+    background: #4aafde;
+    /*margin-right: 20px;*/
+}
+.tractor {
+    /*width: 300px;*/
+    height: 123px;
+    /*float: right;*/
+    position: relative;
+    background: #cc79d1;
+    margin-right: 0px;
+}
+.cart {
+    /*width: 300px;*/
+    height: 123px;
+    /*float: right;*/
+    position: relative;
+    background: #85d179;
+    /*margin-top: 20px;*/
+    margin-right: 0px;
+}
+.truck {
+    /*width: 300px;*/
+    height: 123px;
+    /*float: right;*/
+    position: relative;
+    background: #f6b22d;
+    /*margin-top: 20px;*/
+    margin-right: 0px;
+}
+/*SLIDER*/
+.slide img{
+    width: 100%;
+}
+
+
+/*почему не работает position bottom?
+как прописать прозрачный фон но текст ссылки обычным белым?
+Почему не получилось спозиционировать картинку и так добиться
+чтобы текст был на ней?*/
+
+/*.slider {*/
+    /*position: relative;*/
+    /*!*width: 620px;*!*/
+    /*height: 266px;*/
+    /*!*float: left;*!*/
+    /*margin-right: 20px;*/
+    /*!*margin-top: 20px;*!*/
+    /*color: white;*/
+    /*font-family: "cuprum";*/
+/*}*/
+/*.slider-controls {*/
+    /*position: absolute;*/
+    /*width: 50px;*/
+    /*height: 25px;*/
+    /*margin-right: -25px;*/
+    /*left: 50%;*/
+    /*bottom: 26px;*/
+    /*text-align: center;*/
+    /*z-index: 10;*/
+    /*cursor: pointer;*/
+/*}*/
+/*.slider input[type=radio] {*/
+    /*display: none;*/
+    /*!*    z-index: 11;*!*/
+/*}*/
+/*.slider-controls label {*/
+    /*display: inline-block;*/
+    /*width: 5px;*/
+    /*height: 5px;*/
+    /*background-color: #fff;*/
+    /*border: 3px solid #fff;*/
+    /*border-radius: 50%;*/
+/*}*/
+/*#btn-1:checked ~ .slider-controls label[for="btn-1"],*/
+/*#btn-2:checked ~ .slider-controls label[for="btn-2"] {*/
+    /*background-color: #ee3643;*/
+/*}*/
+
+/*.slide1 {*/
+    /*display: block;*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*!*width: 570px;*!*/
+    /*height: 216px;*/
+    /*padding: 25px;*/
+    /*background-image: url("../img/slide-1.jpg");*/
+    /*background-repeat: no-repeat;*/
+/*}*/
+/*.slide2 {*/
+    /*display: none;*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*width: 570px;*/
+    /*height: 216px;*/
+    /*padding: 25px;*/
+    /*background-image: url("../img/slide-2.jpg");*/
+    /*background-repeat: no-repeat;*/
+/*}*/
+/*.slide1 .btn,*/
+/*.slide2 .btn{*/
+    /*display: inline-block;*/
+    /*padding: 11px 46px;*/
+    /*margin-top: 80px;*/
+/*}*/
+/*.slide-title {*/
+    /*font-weight: bold;*/
+    /*font-size: 36px;*/
+    /*text-transform: uppercase;*/
+    /*margin-bottom: -14px;*/
+/*}*/
+/*#btn-1:checked ~ .slides .slide1,*/
+/*#btn-2:checked ~ .slides .slide2 {*/
+    /*display: block;*/
+/*}*/
+/*!*Arrows*!*/
+
+/*.slider .sprite-left {*/
+    /*position: absolute;*/
+    /*top: 120px;*/
+    /*left: 25px;*/
+    /*z-index: 8;*/
+    /*background-image: url("../img/technomart-sprites.png");*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: -60px -207px;*/
+    /*display: block;*/
+    /*width: 45px;*/
+    /*height: 45px;*/
+    /*border: 1px solid red;*/
+    /*cursor: pointer;*/
+/*}*/
+/*.slider .sprite-right {*/
+    /*position: absolute;*/
+    /*top: 120px;*/
+    /*right: 25px;*/
+    /*z-index: 8;*/
+    /*background-image: url("../img/technomart-sprites.png");*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: -194px -203px;*/
+    /*display: block;*/
+    /*width: 45px;*/
+    /*height: 45px;*/
+    /*border: 1px solid red;*/
+    /*cursor: pointer;*/
+/*}*/
+
+/*SLIDER END*/
+
+.bucket:after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/technomart-sprites.png");
+    right: 8px;
+    bottom: 10px;
+    background-position: -30px -20px;
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 100px;
+}
+.drill:after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/technomart-sprites.png");
+    right: 8px;
+    bottom: 10px;
+    background-position: -200px -20px;
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 100px;
+}
+.tractor:after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/technomart-sprites.png");
+    right: 8px;
+    bottom: 10px;
+    background-position: -340px -20px;
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 100px;
+}
+.cart:after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/technomart-sprites.png");
+    right: 8px;
+    bottom: 10px;
+    background-position: -480px -30px;
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 100px;
+}
+.truck:after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/technomart-sprites.png");
+    right: 8px;
+    bottom: 10px;
+    background-position: -330px -170px;
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 100px;
+}
+/*POPULAR GOODS STYLES*/
+
+.popular-goods {
+    margin-top: 52px;
+    /*border: 1px dashed red;*/
+}
+.popular-goods .popular-goods-heading {
+    position: relative;
+    width: 100%;
+    height: 88px;
+    margin-bottom: 20px;
+    background: #f7f3ec;
+}
+.popular-goods .popular-goods-heading span {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    text-transform: uppercase;
+    font-family: "Cuprum";
+    font-size: 30px;
+}
+.popular-goods .popular-goods-heading .btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    display: block;
+    float: right;
+    margin-right: 0;
+    font-family: "Cuprum";
+    font-size: 14px;
+    padding: 12px 55px 12px 60px;
+}
+/*POPULAR-MANUFACTURERS*/
+
+.popular-manufacturers {
+    margin-top: 20px;
+}
+.popular-manufacturers div {
+    position: relative;
+    width: 100%;
+    height: 88px;
+    margin-bottom: 20px;
+    background: #f7f3ec;
+}
+.popular-manufacturers span {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    text-transform: uppercase;
+    font-family: "Cuprum";
+    font-size: 30px;
+}
+.popular-manufacturers .btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    display: block;
+    float: right;
+    margin-right: 0;
+    font-family: "Cuprum";
+    font-size: 14px;
+    padding: 12px 55px 12px 60px;
+}
+.popular-manufacturers img {
+    margin: 0;
+    padding: 0;
+    display: block;
+    /*border: 1px solid indigo;*/
+}
+.popular-manufacturers a {
+    display: block;
+    float: left;
+    margin-right: 17px;
+    margin-bottom: 20px;
+    border: 1px solid #e5e5e5;
+}
+.popular-manufacturers a:nth-child(5),
+.popular-manufacturers a:nth-child(9) {
+    margin-right: 0;
+}
+/*SERVICES*/
+
+.services-paragraphs {
+    padding-top: 75px;
+    padding-bottom: 62px;
+    background: #f2f6f8;
+}
+.menu-services {
+    width: 240px;
+    margin-right: 80px;
+    background: #32425c;
+    list-style: none;
+    padding: 0px;
+    float: left;
+}
+.menu-services a {
+    color: #fff;
+    display: block;
+    padding: 23px;
+    border-bottom: 1px solid #293449;
+    border-top: 1px solid #405069;
+}
+.menu-services .active {
+    background: #fff;
+    color: #32425c;
+    border: none;
+}
+.menu-services a:hover {
+    background: #fff;
+    color: #32425c;
+    opacity: 0.5;
+}
+.shop {
+    margin-bottom: 76px;
+}
+.shop h2 {
+    font-family: "Cuprum";
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.shop p {
+    font-family: "PT Sans";
+    font-size: 13px;
+}
+.transport {
+    width: 280px;
+    margin-right: 130px;
+    float: left;
+}
+.transport h2 {
+    font-family: "Cuprum";
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.services-paragraphs img {
+    /*float: right;*/
+    margin-right: 0;
+}
+/*ABOUT*/
+
+.about {
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+.technomart-company {
+    float: left;
+}
+.technomart-company h1 {
+    display: inline-block;
+}
+.technomart-company p {
+    width: 520px;
+    margin: 0;
+    padding: 0;
+    line-height: 24px;
+}
+.technomart-company .paragraph-first {
+    margin-bottom: 30px;
+}
+.about-list {
+    list-style: none;
+    line-height: 24px;
+}
+.about-list li {
+    position: relative;
+}
+.about-list li:before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background: #fb565a;
+    left: -30px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.technomart-company .btn {
+    margin-top: 20px;
+    padding: 12px 38px;
+}
+/*MAP*/
+
+.map-section {
+    float: right;
+    width: 300px;
+}
+.map-section p {
+    line-height: 24px;
+    /*width: 300px;*/
+}
+.map-section .btn {
+    padding: 10px 0;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+/*FOOTER*/
+
+.footer {
+    background: #32425c;
+}
+.logo {
+    background: #ee3643;
+    float: left;
+    color: #fff;
+    font-family: "Cuprum";
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 16px 32px;
+    border-bottom: 5px solid #b52933;
+    line-height: 26px;
+    vertical-align: middle;
+}
+.footer a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: -3px;
+    padding: 5px 30px 5px 30px;
+}
+.footer a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+}
+.footer-menu-1 {
+    float: right;
+    margin-top: 40px;
+}
+.footer-contacts {
+    display: block;
+    float: left;
+    color: #fff;
+    margin-top: 29px;
+    padding: 0;
+}
+.footer-menu-2 {
+    float: right;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+.footer-menu-2 a {
+    color: #ffd180;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer a:active {
+    text-decoration: none;
+    opacity: 0.5;
+}
+/*FOOTER-BOTTOM*/
+
+.footer-bottom {
+    background: #293449;
+    font-family: 'Cuprum';
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 0;
+}
+.footer-bottom p {
+    display: block;
+}
+.footer-bottom span {
+    color: #ffd180;
+}
+.social a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #212a3a;
+    text-align: center;
+}
+.social a:hover {
+    background: #ee3643;
+}
+.social a:active {
+    opacity: 0.5;
+}
+.rights,
+.social,
+.contacts {
+    float: left;
+}
+.academy {
+    float: right;
+}
+.academy span:hover,
+.contacts span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.academy span:active,
+.contacts span:active {
+    color: #ee3643;
+    text-decoration: none;
+    cursor: pointer;
+}
+.social {
+    margin-top: 20px;
+    margin-left: 120px;
+}
+.icon-facebook,
+.icon-twitter,
+.icon-vk {
+    line-height: 40px;
+    color: white;
+    font-size: 18px;
+}
+.contacts {
+    margin-left: 100px;
+}
+/*CATALOG STYLES*/
+
+
+
+.bread-crumps-menu ul {
+    list-style: none;
+    text-transform: uppercase;
+    padding: 0;
+}
+.bread-crumps-menu li {
+    display: inline-block;
+}
+.bread-crumps-menu a {
+    text-decoration: none;
+    color: #000;
+    font-family: "PT Sans";
+    font-size: 13px;
+}
+.bread-crumps-menu i {
+    font-family: "symbols-technomart";
+    opacity: 0.5;
+}
+.icon-home {
+    font-size: 16px;
+}
+.perforator-heading h1 {
+    /*height: 38px;*/
+    padding: 30px 26px 30px;
+    background-color: #f2f6f8;
+    text-transform: uppercase;
+}
+/*Price filter*/
+
+.price-filter {
+    /*width: 222px;*/
+    height: 650px;
+    float: left;
+    margin-bottom: 90px;
+    /*border: 1px dashed #ba3925;*/
+}
+.price-filter>div {
+    padding: 14px 20px;
+    background: #f7f3ec;
+    border-radius: 3px;
+    margin: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: "PT Sans";
+    font-size: 13px;
+    font-weight: 400;
+}
+.price-filter span {
+    text-transform: uppercase;
+    font-family: "PT Sans";
+    font-size: 13px;
+    font-weight: 700;
+}
+/*range-controls*/
+
+.price-filter form {
+    width: 100%;
+    text-transform: uppercase;
+    font-family: "PT Sans";
+}
+.price-filter .range-controls {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    margin-top: 20px;
+    background: #f7f3ec;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.price-filter .range-controls .scale {
+    position: absolute;
+    width: 172px;
+    height: 2px;
+    margin-left: -86px;
+    left: 50%;
+    top: 50%;
+    margin-top: -1px;
+    background: #d7dcde;
+}
+.price-filter .range-controls .range-control-left,
+.price-filter .range-controls .range-control-right {
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    width: 5px;
+    height: 5px;
+    border: 6px solid #fff;
+    background: #ababab;
+    border-radius: 50%;
+    z-index: 10;
+}
+.price-filter .range-controls .range-control-left {
+    left: 20px;
+}
+.price-filter .range-controls .range-control-right {
+    right: 40px;
+}
+.price-filter .range-controls .bar {
+    position: absolute;
+    width: 87%;
+    height: 2px;
+    background: #00ca74;
+}
+/*price-controls*/
+
+.price-filter .price-controls {
+    /*    position: relative;*/
+    width: 100%;
+    height: 38px;
+    margin-top: 9px;
+    text-align: center;
+    vertical-align: bottom;
+    line-height: 38px;
+}
+.price-filter .price-controls .price-min,
+.price-filter .price-controls .price-max {
+    /*    position: absolute;*/
+    /*    display: inline-block;*/
+    width: 95px;
+    height: 38px;
+    /*     padding: 10px 0;   */
+    background: #f7f3ec;
+    border: 0;
+    border-radius: 3px;
+    vertical-align: bottom;
+    font-family: "PT Sans";
+    font-size: 17px;
+    font-style: normal;
+    text-align: center;
+}
+.price-filter .price-controls .price-min {
+    float: left;
+}
+.price-filter .price-controls .price-max {
+    float: right;
+}
+/*manufacturers*/
+
+.price-filter .manufacturers {
+    width: 100%;
+    padding: 25px 0 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+.price-filter .manufacturers span {
+    padding: 0;
+    font-family: "PT Sans";
+    font-size: 17px;
+    line-height: 17px;
+    font-weight: 700;
+}
+.price-filter .manufacturers ul {
+    list-style: none;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    font-family: "PT Sans";
+    font-size: 15px;
+    line-height: 15px;
+}
+.price-filter .manufacturers li {
+    margin-bottom: 20px;
+}
+/*custom checkboxes*/
+
+.price-filter .manufacturers input[type="checkbox"] {
+    display: none;
+}
+.price-filter .manufacturers input[type="checkbox"]+label {
+    vertical-align: middle;
+}
+.price-filter .manufacturers input[type="checkbox"]+label:before {
+    content: '\2610';
+    font-family: "symbols-technomart";
+    font-size: 28px;
+    margin-right: 12px;
+    color: #c1c1c1;
+    vertical-align: middle;
+}
+.price-filter .manufacturers input[type="checkbox"]:checked+label:before {
+    content: '\2611';
+    font-family: "symbols-technomart";
+}
+/*custom radio buttons*/
+
+.price-filter .power span {
+    padding: 0;
+    font-family: "PT Sans";
+    font-size: 17px;
+    line-height: 17px;
+    font-weight: 700;
+}
+.price-filter .power ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 14px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.price-filter .power li:first-child {
+    margin-bottom: 20px;
+}
+.price-filter .power input[type="radio"] {
+    display: none;
+}
+.price-filter .power input[type="radio"]+label {
+    vertical-align: middle;
+}
+.price-filter .power input[type="radio"]+label:before {
+    content: '\25cb';
+    font-family: 'symbols-technomart';
+    font-size: 28px;
+    margin-right: 12px;
+    vertical-align: middle;
+    color: #c1c1c1;
+}
+.price-filter .power input[type="radio"]:checked+label:before {
+    content: '\25cf';
+    font-family: 'symbols-technomart';
+}
+input[type="submit"] {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    padding: 0;
+    font-size: 13px;
+    line-height: 13px;
+    padding: 15px 39px;
+    margin-top: 84px;
+}
+/*и все равно наша кнопка на четыре пикселя
+в высоту больше*/
+
+/*CATALOG */
+
+.catalog {
+    /*border: 1px solid seagreen;*/
+    /*width: 700px;*/
+    padding: 0;
+    /*float: right;*/
+}
+.catalog-heading {
+    background: #f7f3ec;
+    margin-bottom: 20px;
+    padding: 14px 0;
+    border-radius: 3px;
+}
+.catalog-heading div {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #000;
+}
+.catalog-heading div:nth-child(1) {
+    margin-left: 20px;
+    margin-right: 145px;
+}
+.catalog-heading div:nth-child(2) {
+    margin-right: 65px;
+    border-bottom: 1px dashed #ee3643;
+    opacity: 0.6;
+}
+.catalog-heading div:nth-child(3) {
+    margin-right: 60px;
+    border-bottom: 1px dashed #ee3643;
+    opacity: 0.6;
+}
+.catalog-heading div:nth-child(4) {
+    border-bottom: 1px dashed #ee3643;
+    opacity: 0.6;
+}
+.catalog .catalog-heading .active {
+    color: #ee3643;
+    border-bottom: 0;
+    opacity: 1;
+}
+/*arrows*/
+
+.icon-up-dir {
+    display: inline-block;
+    font-family: "symbols-technomart";
+    font-size: 23px;
+    color: #ee3643;
+    padding: 0;
+    line-height: 0;
+}
+.icon-down-dir {
+    display: inline-block;
+    font-family: "symbols-technomart";
+    font-size: 23px;
+    color: #c6c2bd;
+    padding: 0;
+    line-height: 0;
+}
+/*Catalog Items*/
+.catalog-items{
+    /*border: 1px solid red;*/
+    padding: 0;
+}
+
+.catalog-item {
+    position: relative;
+    width: 256px;
+    height: 320px;
+    border: 1px solid #e5e5e5;
+    /*float: left;*/
+    margin-bottom: 20px;
+    font-size: 18px;
+    position: relative;
+    margin-left: 20px;
+}
+.popular-goods .catalog-item:first-child {
+    /*margin-left: 0;*/
+}
+.flag {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    right: 0;
+    background-image: url("../img/red-flag_03.png");
+    background-repeat: no-repeat;
+}
+.catalog-item .actions {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 10;
+}
+.catalog-item .actions a {
+    display: block;
+    text-decoration: none;
+    width: 129px;
+    height: 45px;
+    padding: 11px 0;
+    margin: 0 auto;
+    border: 3px solid #63a63e;
+    border-radius: 3px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.catalog-item .actions a:nth-child(1) {
+    margin-bottom: 7px;
+    margin-top: 45px;
+    border-bottom: 3px solid #367315;
+    background-color: #63a63e;
+    color: #fff;
+}
+.catalog-item .actions i {
+    margin-right: 1px;
+}
+.catalog-item .actions a:nth-child(3) {
+    color: #63a63e;
+}
+.catalog-item:hover .actions {
+    display: block;
+}
+.catalog-items img {
+    width: 217px;
+    max-width: 100%;
+    height: 110px;
+}
+.catalog-item .text {
+    line-height: 22px;
+    text-align: center;
+    margin-top: 12px;
+    font-weight: 700;
+}
+.catalog-item .text div:nth-child(1) {
+    min-height: 44px;
+    margin-bottom: 10px;
+}
+.catalog-item .text .power-type{
+opacity: 0.5;
+}
+.catalog-item .text div:nth-child(2) {
+    min-height: 20px;
+    margin-bottom: 10px;
+    color: #999;
+    text-decoration: line-through;
+}
+.catalog-item .text div:nth-child(3) {
+    width: 145px;
+    min-height: 20px;
+    /*    max-width: 100px;*/
+    background-color: #ee3643;
+    padding: 10px 30px;
+    margin: 0 auto;
+    color: #fff;
+    border-radius: 3px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    position: relative;
+}
+.catalog-item .text div:nth-child(3):after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: -20px;
+    top: 0;
+    border: 22px solid #fff;
+    border-left: 21px solid #ee3643;
+    border-left-color: transparent;
+}
+.added {
+    position: absolute;
+    display: none;
+    width: 620px;
+    height: 280px;
+    background: red;
+    z-index: 11;
+}
+.actions a:active .added {
+    display: block;
+}
+/*PAGE NUMBERS*/
+
+.page-numbers{
+    /*position: relative;*/
+    /*border:1px dashed darkblue;*/
+    /*left:226px;*/
+}
+/*f*/
+.page-numbers ul{
+    list-style-type: none;
+}
+
+.page-numbers li{
+    display: inline-block;
+}
+
+.page-numbers a {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 4px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    text-transform: uppercase;
+    margin-right: 5px;
+}
+.page-numbers a:last-child {
+    padding: 12px 30px;
+}
+.page-numbers .active {
+    background: #ee3643 !important;
+    color: #fff;
+}
+/*about perforator*/
+
+.perforator {
+    width: 100%;
+    padding: 65px 0 75px;
+    background: #f2f6f8;
+    margin-top: 60px;
+}
+.perforator h2 {
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.perforator p {
+    font-size: 13px;
+    line-height: 24px;
+    padding: 0;
+    margin: 0;
+}
